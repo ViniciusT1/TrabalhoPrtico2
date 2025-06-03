@@ -1,18 +1,100 @@
-body{
-    background-color: aqua;
+body {
+    background-color: #fdf6e3;
+    color: #5a3e1b;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
 }
 
-#cabe{
-    background-color: chocolate;
+#cabe {
+    background: linear-gradient(90deg, #d2691e, #f4a261);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 1000;
+    border-bottom: 3px solid #e76f51;
 }
-#cabe h1{
-    color: white;
-    text-align: left;
-    line-height: 50px;
+
+#logo img {
+    height: 50px;
+    border-radius: 8px;
+}
+
+#nav-links {
+    display: flex;
+    gap: 25px;
+    margin-right: 10px;
+}
+
+#nav-links a {
+    color: #fff3e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#nav-links a:hover {
+    background-color: #f4a261;
+    color: #3e2723;
+}
+
+main {
+    margin-top: 80px; /* to avoid content hidden behind fixed header */
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #8b4513;
+}
+
+a {
+    color: #d2691e;
+}
+
+a:hover {
+    color: #a0522d;
+}
+
+button {
+    background-color: #f4a261;
+    border: none;
+    color: #3e2723;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e76f51;
+}
+
+.card {
+    background-color: #fff3e0;
+    border: 1px solid #d2b48c;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(210, 180, 140, 0.3);
+}
+
+footer {
+    background-color: #d2691e;
+    color: #fff3e0;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
 }

@@ -10,5 +10,32 @@
       "nome": "Bruno Lima",
       "email": "bruno@example.com"
     }
+  ],
+  "Receitas": [
+    {
+      "id": 1,
+      "titulo": "Bolo de Cenoura",
+      "ingredientes": [
+        "2 cenouras médias",
+        "1 xícara de açúcar",
+        "3 ovos",
+        "1 xícara de óleo",
+        "2 xícaras de farinha de trigo",
+        "1 colher de sopa de fermento em pó"
+      ],
+      "modoPreparo": "Bata as cenouras, o açúcar, os ovos e o óleo no liquidificador. Misture com a farinha e o fermento. Asse em forno pré-aquecido a 180°C por 40 minutos."
+    },
+    {
+      "id": 2,
+      "titulo": "Pão Caseiro",
+      "ingredientes": [
+        "500g de farinha de trigo",
+        "10g de sal",
+        "10g de açúcar",
+        "20g de fermento biológico fresco",
+        "300ml de água morna"
+      ],
+      "modoPreparo": "Misture todos os ingredientes até formar uma massa homogênea. Deixe descansar por 1 hora. Modele e asse em forno pré-aquecido a 200°C por 30 minutos."
+    }
   ]
 }
