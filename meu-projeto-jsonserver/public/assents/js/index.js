@@ -20,7 +20,7 @@ fetch('http://localhost:3000/Receitas')
   .then(data => {
     console.log('Receitas recebidas:', data);
 
-    // Render cards
+  
     for (let i = 0; i < 6; i++) {
       let card = document.createElement("a");
       card.className = "card";
@@ -65,7 +65,7 @@ fetch('http://localhost:3000/Receitas')
     const prevButton = carouselContainer.querySelector('.prev-btn');
     const slideWidth = slides[0].getBoundingClientRect().width;
 
-    // Arrange the slides next to one another
+    
     slides.forEach((slide, index) => {
       slide.style.left = slideWidth * index + 'px';
     });
@@ -96,7 +96,6 @@ fetch('http://localhost:3000/Receitas')
       moveToSlide(track, currentSlide, prevSlide);
     });
 
-    // Set first slide as current
     slides[0].classList.add('current-slide');
 
   })

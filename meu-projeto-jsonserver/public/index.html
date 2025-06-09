@@ -5,20 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assents/style/style.css"> 
     <title>Receitas</title>
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOMa1z5l">
 </head>
 <body>
 
 <div id= "carro"></div>
     <div id="cabe"></div>
-
+    
     <div id="conteudo"></div>
     <div id="card"></div>
     <div id="rodape"></div>
-
+    <div id="map"></div>
     <footer>
         <p>© 2024 Receitas. Todos os direitos reservados.</p>
         <p>Contato: contato@receitas.com</p>
     </footer>
 <script src="assents/js/index.js"></script> 
+
+<script>
+    const centralLatLong = [-43.9397233, -19.9332786]; // Ponto central do mapa (Belo Horizonte)
+    fetch('http://localhost:3000/locais')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+
+    function montarMapa(dadosLocais) {
+   // Defina o Access Token do Mapbox
+   mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tbWVsY2FybmVpcm8tcHVjIiwiYSI6ImNsb3ZuMTBoejBsd2gyamwzeDZzcWl5b3oifQ.VPWc3qoyon8Z_-URfKpvKg';
+   map = new mapboxgl.Map({
+      container: 'map', // O container do mapa
+      style: 'mapbox://styles/mapbox/streets-v12', // Estilo do mapa
+      center: centralLatLong, // Localização central do mapa
+      zoom: 9 // Zoom inicial
+   });
+   
+   // Adiciona marcadores para cada local
+   dadosLocais.forEach((uni) => {
+      let popup = new mapboxgl.Popup({ offset: 25 })
+      .setHTML(`<h3><a href="${uni.url}" target="_blank">${uni.descricao}</a></h3><br>${uni.endereco} <br> ${uni.cidade}`);
+      const marker = new mapboxgl.Marker({ color: uni.cor })
+      .setLngLat(uni.latlong)
+      .setPopup(popup)
+      .addTo(map);
+   });
+
+   // Obtém a localização do usuário e adiciona um marcador
+   navigator.geolocation.getCurrentPosition(processarGetCurrentPosition, () => { alert('Erro ao obter localização.') });
+}
+
+// Função para processar a localização do usuário
+function processarGetCurrentPosition(local) {
+   let popup = new mapboxgl.Popup({ offset: 25 })
+   .setHTML(`<h3> Estou aqui!!! </h3>`);
+   const marker = new mapboxgl.Marker({ color: 'yellow' })
+   .setLngLat([local.coords.longitude, local.coords.latitude])
+   .setPopup(popup)
+   .addTo(map);
+}
+let map;
+
+// Função que carrega os dados de unidades da PUC Minas
+window.onload = () => {
+  montarMapa (data);
+}
+
+
+});
+  
+
+</script>
 </body>
 </html>
