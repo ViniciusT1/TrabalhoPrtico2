@@ -1,19 +1,19 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Ana Souza",
       "email": "ana@example.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Bruno Lima",
       "email": "bruno@example.com"
     }
   ],
   "Receitas": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Bolo de Cenoura",
       "descricao": "Delicioso bolo de cenoura fofinho e úmido, perfeito para o café da tarde.",
       "ingredientes": [
@@ -22,13 +22,13 @@
         "3 ovos",
         "1 xícara de óleo",
         "2 xícaras de farinha de trigo",
-        "1 colher de sopa de fermento em pó"  
+        "1 colher de sopa de fermento em pó"
       ],
       "imgsrc": "assents/img/cenoura.png",
       "modoPreparo": "Bata as cenouras, o açúcar, os ovos e o óleo no liquidificador. Misture com a farinha e o fermento. Asse em forno pré-aquecido a 180°C por 40 minutos."
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "Pão Caseiro",
       "descricao": "Pão caseiro macio e saboroso, ideal para o café da manhã ou lanche.",
       "ingredientes": [
@@ -42,7 +42,7 @@
       "modoPreparo": "Misture todos os ingredientes até formar uma massa homogênea. Deixe descansar por 1 hora. Modele e asse em forno pré-aquecido a 200°C por 30 minutos."
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "Salada Caesar",
       "descricao": "Salada fresca e crocante com frango grelhado e molho Caesar clássico.",
       "ingredientes": [
@@ -56,7 +56,7 @@
       "modoPreparo": "Corte a alface, adicione o frango fatiado, o queijo ralado e os croutons. Regue com o molho Caesar."
     },
     {
-      "id": 4,
+      "id": "4",
       "titulo": "Sopa de Legumes",
       "descricao": "Sopa nutritiva e reconfortante feita com legumes frescos e caldo saboroso.",
       "ingredientes": [
@@ -70,7 +70,7 @@
       "modoPreparo": "Refogue a cebola e o alho, adicione os legumes e o caldo. Cozinhe até os legumes estarem macios."
     },
     {
-      "id": 5,
+      "id": "5",
       "titulo": "Espaguete à Carbonara",
       "descricao": "Clássico espaguete à carbonara com bacon crocante e molho cremoso.",
       "ingredientes": [
@@ -84,7 +84,7 @@
       "modoPreparo": "Cozinhe o espaguete. Frite o bacon até ficar crocante. Misture os ovos batidos com o queijo e adicione ao espaguete quente, junto com o bacon. Tempere com pimenta."
     },
     {
-      "id": 6,
+      "id": "6",
       "titulo": "Tacos de Frango",
       "descricao": "Tacos saborosos com frango grelhado, vegetais frescos e molho picante.",
       "ingredientes": [
@@ -97,8 +97,9 @@
       ],
       "imagem": "assents/img/taco.png",
       "modoPreparo": "Aqueça as tortilhas, adicione o frango, alface, tomate e queijo. Regue com molho de pimenta a gosto."
-    },{
-      "id": 7,
+    },
+    {
+      "id": "7",
       "titulo": "Brownie de Chocolate",
       "descricao": "Brownie de chocolate rico e fudgy, perfeito para os amantes de chocolate.",
       "ingredientes": [
@@ -113,7 +114,7 @@
       "modoPreparo": "Derreta o chocolate e a manteiga. Misture os ovos, açúcar, farinha e baunilha. Despeje em uma forma untada e asse a 180°C por 25 minutos."
     },
     {
-      "id": 8,
+      "id": "8",
       "titulo": "Smoothie de Frutas",
       "descricao": "Smoothie refrescante de frutas tropicais, ideal para um lanche saudável.",
       "ingredientes": [
@@ -125,8 +126,9 @@
       ],
       "imagem": "assents/img/smoothie.png",
       "modoPreparo": "Bata todos os ingredientes no liquidificador até ficar homogêneo. Sirva gelado."
-    },{
-      "id": 9,
+    },
+    {
+      "id": "9",
       "titulo": "Pizza Margherita",
       "descricao": "Pizza clássica Margherita com molho de tomate, mussarela e manjericão fresco.",
       "ingredientes": [
@@ -138,8 +140,9 @@
       ],
       "imagem": "assents/img/pizza.png",
       "modoPreparo": "Espalhe o molho sobre a massa, adicione a mussarela e leve ao forno a 220°C por 15 minutos. Finalize com manjericão e azeite."
-    },{
-      "id": 10,
+    },
+    {
+      "id": "10",
       "titulo": "Chili con Carne",
       "descricao": "Chili con carne apimentado com feijão, carne moída e especiarias.",
       "ingredientes": [
@@ -152,12 +155,21 @@
       ],
       "imagem": "assents/img/chili.png",
       "modoPreparo": "Refogue a cebola, o alho e o pimentão. Adicione a carne e cozinhe até dourar. Misture o feijão e o chili em pó. Cozinhe por 20 minutos."
-    }
-
-  ],
-  "locais":[
+    },
     {
-      "id": 1,
+      "id": "7a40",
+      "titulo": "Vinicius",
+      "descricao": "FGomes",
+      "ingredientes": [
+        "Pereira"
+      ],
+      "imagem": "",
+      "modoPreparo": "Na cozinha"
+    }
+  ],
+  "locais": [
+    {
+      "id": "1",
       "descricao": "PUC Minas - Coração Eucarístico",
       "endereco": "Rua Dom José Gaspar, 500",
       "favorito": true,
@@ -170,7 +182,7 @@
       "cor": "red"
     },
     {
-      "id": 2,
+      "id": "2",
       "descricao": "PUC Minas - Praça da Liberdade",
       "endereco": "Av. Brasil, 2023 - Funcionários",
       "favorito": false,
@@ -183,7 +195,7 @@
       "cor": "red"
     },
     {
-      "id": 3,
+      "id": "3",
       "descricao": "PUC Minas - Barreiro",
       "endereco": "Avenida Afonso Vaz de Melo, 1.200 - Barreiro",
       "favorito": true,
@@ -196,7 +208,7 @@
       "cor": "red"
     },
     {
-      "id": 4,
+      "id": "4",
       "descricao": "PUC Minas - São Gabriel",
       "endereco": "Rua Walter Ianni, 255 - São Gabriel",
       "favorito": true,
@@ -209,7 +221,7 @@
       "cor": "red"
     },
     {
-      "id": 5,
+      "id": "5",
       "descricao": "PUC Minas - Contagem",
       "endereco": "R. Rio Comprido, 4.580",
       "favorito": false,
@@ -222,7 +234,7 @@
       "cor": "blue"
     },
     {
-      "id": 6,
+      "id": "6",
       "descricao": "PUC Minas - Betim",
       "endereco": "R. do Rosário, 1.081 Bairro Angola",
       "favorito": true,
@@ -235,7 +247,7 @@
       "cor": "blue"
     },
     {
-      "id": 7,
+      "id": "7",
       "descricao": "PUC Minas - Poços de Caldas",
       "endereco": "Av. Pe. Cletus Francis Cox, 1.661",
       "favorito": true,
@@ -249,4 +261,3 @@
     }
   ]
 }
-

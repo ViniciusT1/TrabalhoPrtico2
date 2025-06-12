@@ -73,30 +73,45 @@ fetch('http://localhost:3000/Receitas')
     let currentSlideIndex = 0;
 
     const moveToSlide = (track, current, target) => {
-      track.style.transform = 'translateX(-' + target.style.left + ')';
+      const targetLeft = parseInt(target.style.left, 10);
+      track.style.transform = 'translateX(-' + targetLeft + 'px)';
       current.classList.remove('current-slide');
       target.classList.add('current-slide');
     };
 
     nextButton.addEventListener('click', e => {
       const currentSlide = track.querySelector('.current-slide') || slides[0];
+      console.log('Next button clicked. Current slide:', currentSlide);
       let nextSlide = currentSlide.nextElementSibling;
       if (!nextSlide) {
         nextSlide = slides[0];
       }
+      console.log('Moving to next slide:', nextSlide);
       moveToSlide(track, currentSlide, nextSlide);
     });
 
     prevButton.addEventListener('click', e => {
       const currentSlide = track.querySelector('.current-slide') || slides[0];
+      console.log('Prev button clicked. Current slide:', currentSlide);
       let prevSlide = currentSlide.previousElementSibling;
       if (!prevSlide) {
         prevSlide = slides[slides.length - 1];
       }
+      console.log('Moving to prev slide:', prevSlide);
       moveToSlide(track, currentSlide, prevSlide);
     });
 
     slides[0].classList.add('current-slide');
+
+    window.addEventListener('resize', () => {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      slides.forEach((slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
+      });
+      const currentSlide = track.querySelector('.current-slide') || slides[0];
+      const currentLeft = parseInt(currentSlide.style.left, 10);
+      track.style.transform = 'translateX(-' + currentLeft + 'px)';
+    });
 
   })
   .catch(error => {

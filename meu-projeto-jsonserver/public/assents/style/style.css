@@ -231,15 +231,15 @@ footer {
 }
 
 .carousel-btn {
-    display: none;
+    display: block;
 }
 
 .prev-btn {
-    display: none;
+    display: block;
 }
 
 .next-btn {
-    display: none;
+    display: block;
 }
 
 /* Style for the YouTube video link */

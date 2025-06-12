@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Receitas</title>
+    <link rel="stylesheet" href="assents/style/cadastro.css" />
+</head>
+<body>
+    <h2>Formulário de Cadastro de Receitas</h2>
+    <form id="cadastro-form">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required />
+        <br />
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+        <br />
+        <label for="ingredientes">Ingredientes (separados por vírgula):</label>
+        <input type="text" id="ingredientes" name="ingredientes" required />
+        <br />
+        <label for="imagem">URL da Imagem:</label>
+        <input type="text" id="imagem" name="imagem" />
+        <br />
+        <label for="modoPreparo">Modo de Preparo:</label>
+        <textarea id="modoPreparo" name="modoPreparo" required></textarea>
+        <br />
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Receitas Cadastradas</h2>
+    <table id="receitas-table" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Ingredientes</th>
+                <th>Imagem</th>
+                <th>Modo de Preparo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas de receitas serão inseridas aqui -->
+        </tbody>
+    </table>
+
+    <footer id="rodape" class="footer">
+        <p>© 2024 Receitas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assents/js/index.js"></script>
+    <script src="assents/js/cadastro.js"></script>
+</body>
+</html>
