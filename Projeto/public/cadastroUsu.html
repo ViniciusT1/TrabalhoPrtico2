@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro Usuário</title>
+  <link rel="stylesheet" href="assents/style/style.css" />
+  <style>
+    .form-container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: #fff3e0;
+      border: 1px solid #deb681;
+      border-radius: 10px;
+      box-shadow: 10px 2px 8px rgba(210, 180, 140, 0.3);
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #8b4513;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #5a3e1b;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #deb681;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      background-color: #f4a261;
+      border: none;
+      color: #3e2723;
+      padding: 10px 0;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e76f51;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro Usuário</h2>
+    <form id="cadastroUsu-form">
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" id="login" name="login" required />
+      </div>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required />
+      </div>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+
+  <script src="assents/js/usuario.js"></script>
+</body>
+</html>

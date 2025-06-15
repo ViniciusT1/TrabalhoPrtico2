@@ -1,0 +1,353 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "login": "ana.souza",
+      "nome": "Ana Souza",
+      "email": "ana@example.com",
+      "senha": "senha123",
+      "admin": false
+    },
+    {
+      "id": "2",
+      "login": "bruno.lima",
+      "nome": "Bruno Lima",
+      "email": "bruno@example.com",
+      "senha": "senha456",
+      "admin": false
+    },
+    {
+      "id": "f29a",
+      "login": "ViniciusT1",
+      "nome": "Vinicim",
+      "email": "flensssg@gmail.com",
+      "senha": "Senha123",
+      "admin": true
+    }
+  ],
+  "Receitas": [
+    {
+      "id": "1",
+      "titulo": "Bolo de Cenoura",
+      "descricao": "Delicioso bolo de cenoura fofinho e úmido, perfeito para o café da tarde.",
+      "ingredientes": [
+        "2 cenouras médias",
+        "1 xícara de açúcar",
+        "3 ovos",
+        "1 xícara de óleo",
+        "2 xícaras de farinha de trigo",
+        "1 colher de sopa de fermento em pó"
+      ],
+      "imgsrc": "assents/img/cenoura.png",
+      "modoPreparo": "Bata as cenouras, o açúcar, os ovos e o óleo no liquidificador. Misture com a farinha e o fermento. Asse em forno pré-aquecido a 180°C por 40 minutos.",
+      "videoUrl": "https://youtu.be/bZOWHzZFdRE?si=7wLR03BBvTs0zKs2"
+    },
+    {
+      "id": "2",
+      "titulo": "Pão Caseiro",
+      "descricao": "Pão caseiro macio e saboroso, ideal para o café da manhã ou lanche.",
+      "ingredientes": [
+        "500g de farinha de trigo",
+        "10g de sal",
+        "10g de açúcar",
+        "20g de fermento biológico fresco",
+        "300ml de água morna"
+      ],
+      "imagem": "assents/img/pao.png",
+      "modoPreparo": "Misture todos os ingredientes até formar uma massa homogênea. Deixe descansar por 1 hora. Modele e asse em forno pré-aquecido a 200°C por 30 minutos.",
+      "videoUrl": "https://youtu.be/F8o5ih9vcnM?si=IVQ27QroNUZ8bqO1"
+    },
+    {
+      "id": "3",
+      "titulo": "Salada Caesar",
+      "descricao": "Salada fresca e crocante com frango grelhado e molho Caesar clássico.",
+      "ingredientes": [
+        "1 alface romana",
+        "100g de peito de frango grelhado",
+        "50g de queijo parmesão",
+        "Croutons",
+        "Molho Caesar"
+      ],
+      "imagem": "assents/img/salada.png",
+      "modoPreparo": "Corte a alface, adicione o frango fatiado, o queijo ralado e os croutons. Regue com o molho Caesar.",
+      "videoUrl": "https://youtu.be/u3luOSDfuZ4?si=wEGzjGVUwBfgeruS"
+    },
+    {
+      "id": "4",
+      "titulo": "Sopa de Legumes",
+      "descricao": "Sopa nutritiva e reconfortante feita com legumes frescos e caldo saboroso.",
+      "ingredientes": [
+        "2 cenouras picadas",
+        "1 batata picada",
+        "1 cebola picada",
+        "2 dentes de alho picados",
+        "1 litro de caldo de legumes"
+      ],
+      "imagem": "assents/img/legume.png",
+      "modoPreparo": "Refogue a cebola e o alho, adicione os legumes e o caldo. Cozinhe até os legumes estarem macios.",
+      "videoUrl": "https://youtu.be/KhtlDMXXvdg?si=eRuaib1F3LOnxDMs "
+    },
+    {
+      "id": "5",
+      "titulo": "Espaguete à Carbonara",
+      "descricao": "Clássico espaguete à carbonara com bacon crocante e molho cremoso.",
+      "ingredientes": [
+        "200g de espaguete",
+        "100g de bacon",
+        "2 ovos",
+        "50g de queijo parmesão ralado",
+        "Pimenta-do-reino a gosto"
+      ],
+      "imagem": "assents/img/espagete.png",
+      "modoPreparo": "Cozinhe o espaguete. Frite o bacon até ficar crocante. Misture os ovos batidos com o queijo e adicione ao espaguete quente, junto com o bacon. Tempere com pimenta.",
+      "videoUrl": "https://youtu.be/KtXcCHw7bj4?si=kHiQFawSfmMEd5Jn"
+    },
+    {
+      "id": "6",
+      "titulo": "Tacos de Frango",
+      "descricao": "Tacos saborosos com frango grelhado, vegetais frescos e molho picante.",
+      "ingredientes": [
+        "2 peitos de frango grelhados e desfiados",
+        "Tortilhas de milho",
+        "Alface picada",
+        "Tomate picado",
+        "Queijo ralado",
+        "Molho de pimenta"
+      ],
+      "imagem": "assents/img/taco.png",
+      "modoPreparo": "Aqueça as tortilhas, adicione o frango, alface, tomate e queijo. Regue com molho de pimenta a gosto.",
+      "videoUrl": "https://youtu.be/mr4pCNKZEVc?si=G_S_nPxWJuOvOAr8"
+    },
+    {
+      "titulo": "Brownie de Chocolate",
+      "descricao": "Brownie de chocolate rico e fudgy, perfeito para os amantes de chocolate.",
+      "ingredientes": [
+        "200g de chocolate meio amargo",
+        "100g de manteiga",
+        "2 ovos",
+        "150g de açúcar",
+        "100g de farinha de trigo",
+        "1 colher de chá de essência de baunilha"
+      ],
+      "imagem": "assents/img/brounie.jpeg",
+      "modoPreparo": "Derreta o chocolate e a manteiga. Misture os ovos, açúcar, farinha e baunilha. Despeje em uma forma untada e asse a 180°C por 25 minutos.",
+      "id": "7",
+      "videoUrl": "https://youtu.be/W0Oi_KSLs9Y?si=NMS1RJAO8lNvBAWm"
+    },
+    {
+      "titulo": "Smoothie de Frutas",
+      "descricao": "Smoothie refrescante de frutas tropicais, ideal para um lanche saudável.",
+      "ingredientes": [
+        "1 banana",
+        "1/2 xícara de morangos",
+        "1/2 xícara de iogurte natural",
+        "1 colher de sopa de mel",
+        "Gelo a gosto"
+      ],
+      "imagem": "assents/img/smothie.png",
+      "modoPreparo": "Bata todos os ingredientes no liquidificador até ficar homogêneo. Sirva gelado.",
+      "id": "8",
+      "videoUrl": "https://youtu.be/nBm1MAObCk8?si=jj4I77Z_zuwZpLNd"
+    },
+    {
+      "titulo": "Pizza Margherita",
+      "descricao": "Pizza clássica Margherita com molho de tomate, mussarela e manjericão fresco.",
+      "ingredientes": [
+        "Massa de pizza",
+        "Molho de tomate",
+        "200g de queijo mussarela",
+        "Folhas de manjericão fresco",
+        "Azeite a gosto"
+      ],
+      "imagem": "assents/img/pizza.jpg",
+      "modoPreparo": "Espalhe o molho sobre a massa, adicione a mussarela e leve ao forno a 220°C por 15 minutos. Finalize com manjericão e azeite.",
+      "id": "9",
+      "videoUrl": "https://youtu.be/u9YXJlzZBtM?si=WFAqqWzDLp8-Pirg"
+    },
+    {
+      "titulo": "Chili con Carne",
+      "descricao": "Chili con carne apimentado com feijão, carne moída e especiarias.",
+      "ingredientes": [
+        "500g de carne moída",
+        "1 lata de feijão vermelho",
+        "1 cebola picada",
+        "2 dentes de alho picados",
+        "1 pimentão vermelho picado",
+        "1 colher de sopa de chili em pó"
+      ],
+      "imagem": "assents/img/chili.jpg",
+      "modoPreparo": "Refogue a cebola, o alho e o pimentão. Adicione a carne e cozinhe até dourar. Misture o feijão e o chili em pó. Cozinhe por 20 minutos.",
+      "id": "10",
+      "videoUrl": "https://youtu.be/BmreqIKeAdw?si=fQElKDP6vXTYfSfy"
+    },
+    {
+      "id": "7a40",
+      "titulo": "Vinicius",
+      "descricao": "FGomes",
+      "ingredientes": [
+        "Pereira"
+      ],
+      "imagem": "",
+      "modoPreparo": "Na cozinha",
+      "videoUrl": "https://youtu.be/BmreqIKeAdw?si=fQElKDP6vXTYfSfy"
+    }
+  ],
+  "locais": [
+    {
+      "id": "1",
+      "descricao": "PUC Minas - Coração Eucarístico",
+      "endereco": "Rua Dom José Gaspar, 500",
+      "favorito": true,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -43.992911,
+        -19.923564
+      ],
+      "url": "https://www.pucminas.br",
+      "cor": "red"
+    },
+    {
+      "id": "2",
+      "descricao": "PUC Minas - Praça da Liberdade",
+      "endereco": "Av. Brasil, 2023 - Funcionários",
+      "favorito": false,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -43.9397233,
+        -19.9332786
+      ],
+      "url": "https://www.pucminas.br/unidade/praca-da-liberdade/Paginas/default.aspx",
+      "cor": "red"
+    },
+    {
+      "id": "3",
+      "descricao": "PUC Minas - Barreiro",
+      "endereco": "Avenida Afonso Vaz de Melo, 1.200 - Barreiro",
+      "favorito": true,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -44.025818,
+        -19.976609
+      ],
+      "url": "https://www.pucminas.br/unidade/barreiro/Paginas/default.aspx",
+      "cor": "red"
+    },
+    {
+      "id": "4",
+      "descricao": "PUC Minas - São Gabriel",
+      "endereco": "Rua Walter Ianni, 255 - São Gabriel",
+      "favorito": true,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -43.917967,
+        -19.859226
+      ],
+      "url": "https://www.pucminas.br/unidade/sao-gabriel/Paginas/default.aspx",
+      "cor": "red"
+    },
+    {
+      "id": "5",
+      "descricao": "PUC Minas - Contagem",
+      "endereco": "R. Rio Comprido, 4.580",
+      "favorito": false,
+      "cidade": "Contagem",
+      "latlong": [
+        -44.076069,
+        -19.939135
+      ],
+      "url": "https://www.pucminas.br/unidade/contagem/Paginas/default.aspx",
+      "cor": "blue"
+    },
+    {
+      "id": "6",
+      "descricao": "PUC Minas - Betim",
+      "endereco": "R. do Rosário, 1.081 Bairro Angola",
+      "favorito": true,
+      "cidade": "Betim",
+      "latlong": [
+        -44.1984331,
+        -19.9550716
+      ],
+      "url": "https://www.pucminas.br/unidade/betim/Paginas/default.aspx",
+      "cor": "blue"
+    },
+    {
+      "id": "7",
+      "descricao": "PUC Minas - Poços de Caldas",
+      "endereco": "Av. Pe. Cletus Francis Cox, 1.661",
+      "favorito": true,
+      "cidade": "Poços de Caldas",
+      "latlong": [
+        -46.5944649,
+        -21.78904
+      ],
+      "url": "https://www.pucpcaldas.br/",
+      "cor": "green"
+    },
+    {
+      "id": "8",
+      "descricao": "Restaurante Xapuri",
+      "endereco": "Rua Mandacarú, 260 - Trevo",
+      "favorito": false,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -44.009167,
+        -19.877778
+      ],
+      "url": "https://www.restaurantexapuri.com.br/",
+      "cor": "orange"
+    },
+    {
+      "id": "9",
+      "descricao": "Dona Lucinha",
+      "endereco": "Rua Padre Odorico, 38 - São Pedro",
+      "favorito": false,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -43.934722,
+        -19.943056
+      ],
+      "url": "https://donalucinha.com.br/",
+      "cor": "orange"
+    },
+    {
+      "id": "10",
+      "descricao": "Casa Cheia",
+      "endereco": "Mercado Central de BH, Av. Augusto de Lima, 744 - Centro",
+      "favorito": false,
+      "cidade": "Belo Horizonte",
+      "latlong": [
+        -43.940833,
+        -19.922222
+      ],
+      "url": "https://www.instagram.com/casacheiamg/",
+      "cor": "orange"
+    },
+    {
+      "id": "11",
+      "descricao": "Chico Doceiro",
+      "endereco": "Rua Conde de Bobadela, 131 - Centro",
+      "favorito": false,
+      "cidade": "Ouro Preto",
+      "latlong": [
+        -43.512222,
+        -20.385833
+      ],
+      "url": "https://www.instagram.com/chicodoceiro/",
+      "cor": "orange"
+    },
+    {
+      "id": "12",
+      "descricao": "Restaurante Pau de Angu",
+      "endereco": "Rua Dom Pedro II, 276 - Centro",
+      "favorito": false,
+      "cidade": "Sabará",
+      "latlong": [
+        -43.826944,
+        -19.889167
+      ],
+      "url": "https://www.instagram.com/paudeangu/",
+      "cor": "orange"
+    }
+  ]
+}

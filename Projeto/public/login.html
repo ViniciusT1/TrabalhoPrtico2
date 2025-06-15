@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="assents/style/style.css" />
+  <link rel= "stylesheet" href ="assents/style/login.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Tela 2 - Login</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" id="login" name="login" required />
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required />
+      </div>
+      <div class="button-group">
+        <button type="button" id="btn-cadastrar">Cadastrar</button>
+        <button type="submit" id="btn-login">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('btn-cadastrar').addEventListener('click', () => {
+      window.location.href = 'cadastroUsu.html';
+    });
+  </script>
+  <script src="assents/js/login.js"></script>
+</body>
+</html>

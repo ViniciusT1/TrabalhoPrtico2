@@ -3,6 +3,14 @@
 const API_URL = 'http://localhost:3000/Receitas';
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if logged in user is admin
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (!loggedInUser || !loggedInUser.admin) {
+        alert('Acesso negado. Apenas administradores podem acessar esta página.');
+        window.location.href = 'index.html';
+        return;
+    }
+
     const form = document.getElementById('cadastro-form');
     const tableBody = document.querySelector('#receitas-table tbody');
 
