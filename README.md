@@ -24,4 +24,6 @@ usuarios:
       "senha": "123"
       "admin": true
 
-Link do código online: 
+Link do código online (EM TESTE): https://trabalho-prtico2.vercel.app/
+iGNORE O ZIP DE CADASTRO ENVIEI ERRADO :)
+
