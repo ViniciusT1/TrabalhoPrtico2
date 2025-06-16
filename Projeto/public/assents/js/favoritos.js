@@ -1,9 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('favorites-container');
 
-  function getFavorites() {
-    const favs = localStorage.getItem('favorites');
+  function getLoggedInUser() {
+    const user = localStorage.getItem('loggedInUser');
+    return user ? JSON.parse(user) : null;
+  }
+
+  function getFavorites(userLogin) {
+    const favs = localStorage.getItem('favorites_' + userLogin);
     return favs ? JSON.parse(favs) : [];
+  }
+
+  const user = getLoggedInUser();
+  if (!user) {
+    container.innerHTML = '<p>Por favor, faça login para ver seus favoritos.</p>';
+    return;
   }
 
   fetch('http://localhost:3000/Receitas')
@@ -14,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then(data => {
-      const favorites = getFavorites();
+      const favorites = getFavorites(user.login);
       const favoriteRecipes = data.filter(recipe => favorites.includes(recipe.id));
 
       if (favoriteRecipes.length === 0) {

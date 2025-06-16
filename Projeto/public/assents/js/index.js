@@ -1,14 +1,19 @@
 var cabe = document.getElementById("cabe");
 var rodape = document.getElementById("rodape");
 
-const loggedInUser = localStorage.getItem('loggedInUser');
+function getLoggedInUser() {
+  const user = localStorage.getItem('loggedInUser');
+  return user ? JSON.parse(user) : null;
+}
+
+const user = getLoggedInUser();
 
 cabe.innerHTML = `
   <a id="logo" href="index.html"><img src="assents/img/Logo.png" alt="Logo"></a>
   <nav id="nav-links">
     <a href="cadastro.html">Cadastro</a>
     <a href="favoritos.html">Favoritos</a>
-    ${loggedInUser ? '' : '<a href="login.html">Login</a>'} | <a id="logout" href="#" >Logout</a>
+    ${user ? '' : '<a href="login.html">Login</a>'} | <a id="logout" href="#" >Logout</a>
   </nav>
 `;
 
@@ -18,23 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
     logoutLink.addEventListener('click', (e) => {
       e.preventDefault();
       localStorage.removeItem('loggedInUser');
-      // Optionally, redirect to login page after logout
       window.location.href = 'login.html';
     });
   }
 });
 
-// Helper functions for favorites
 function getFavorites() {
-  const favs = localStorage.getItem('favorites');
+  if (!user) return [];
+  const favs = localStorage.getItem('favorites_' + user.login);
   return favs ? JSON.parse(favs) : [];
 }
 
 function saveFavorites(favs) {
-  localStorage.setItem('favorites', JSON.stringify(favs));
+  if (!user) return;
+  localStorage.setItem('favorites_' + user.login, JSON.stringify(favs));
 }
 
 function toggleFavorite(id, heartIcon) {
+  if (!user) {
+    alert('Por favor, faça login para gerenciar favoritos.');
+    return;
+  }
   let favorites = getFavorites();
   if (favorites.includes(id)) {
     favorites = favorites.filter(favId => favId !== id);
@@ -78,7 +87,6 @@ fetch('http://localhost:3000/Receitas')
       document.getElementById("card").appendChild(card);
     }
 
-    // Create container for large cards
     let largeCardsContainer = document.createElement("div");
     largeCardsContainer.id = "large-cards";
     largeCardsContainer.style.display = "flex";
@@ -108,7 +116,6 @@ fetch('http://localhost:3000/Receitas')
       largeCardsContainer.appendChild(card);
     }
 
-    // Add event listeners to heart icons
     document.querySelectorAll('.heart-icon').forEach(icon => {
       icon.addEventListener('click', function(event) {
         event.preventDefault();
@@ -125,7 +132,6 @@ fetch('http://localhost:3000/Receitas')
       });
     });
 
-    // Render carousel
     let carouselContainer = document.getElementById("carro");
     carouselContainer.innerHTML = `
       <div class="carousel">
@@ -206,13 +212,10 @@ fetch('http://localhost:3000/Receitas')
   .catch(error => {
     console.error('Erro ao buscar receitas:', error);
   });
-
-  // Search filter functionality
   const searchInput = document.getElementById('search-input');
   searchInput.addEventListener('input', () => {
     const filter = searchInput.value.toLowerCase();
 
-    // Filter small cards
     const smallCards = document.querySelectorAll('#card .card');
     smallCards.forEach(card => {
       const title = card.querySelector('h2').textContent.toLowerCase();
@@ -224,7 +227,6 @@ fetch('http://localhost:3000/Receitas')
       }
     });
 
-    // Filter large cards
     const largeCards = document.querySelectorAll('#large-cards .card');
     largeCards.forEach(card => {
       const title = card.querySelector('h2').textContent.toLowerCase();

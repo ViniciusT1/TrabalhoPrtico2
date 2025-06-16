@@ -17,7 +17,6 @@
     
     <div id="conteudo"></div>
 
-    <!-- Search input for filtering cards -->
     <div id="search-container" style="margin: 20px; text-align: center;">
       <label for="search-input" style="font-weight: bold; margin-right: 10px;">Pesquisa:</label>
       <input type="text" id="search-input" placeholder="Pesquisar receitas..." style="padding: 6px 12px; width: 300px; border-radius: 5px; border: 1px solid #deb681;">
@@ -26,9 +25,26 @@
     <div id="card"></div>
     <div id="rodape"></div>
     <div id="map"></div>
-    <footer>
-        <p>© 2024 Receitas. Todos os direitos reservados.</p>
-        <p>Contato: contato@receitas.com</p>
+    <footer id="rodape" class="footer">
+        <div class="footer-content">
+            <div class="student-info">
+                <p><strong>Aluno(a):</strong> Vinicius Gomes Pereira</p>
+                <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+                <p><strong>Sobre:</strong> 20 anos, aluno de ADS no primeiro período</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://instagram.com/gomesp_v" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://facebook.com/gomesp_v" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://linkedin.com/in/gomesp_v" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <p>© 2025 Receitas. Todos os direitos reservados.</p>
     </footer>
 <script src="assents/js/index.js"></script> 
 
@@ -45,16 +61,14 @@
     console.log(data);
 
     function montarMapa(dadosLocais) {
-   // Defina o Access Token do Mapbox
    mapboxgl.accessToken = 'pk.eyJ1Ijoicm9tbWVsY2FybmVpcm8tcHVjIiwiYSI6ImNsb3ZuMTBoejBsd2gyamwzeDZzcWl5b3oifQ.VPWc3qoyon8Z_-URfKpvKg';
    map = new mapboxgl.Map({
-      container: 'map', // O container do mapa
-      style: 'mapbox://styles/mapbox/streets-v12', // Estilo do mapa
-      center: centralLatLong, // Localização central do mapa
-      zoom: 9 // Zoom inicial
+      container: 'map', 
+      style: 'mapbox://styles/mapbox/streets-v12', 
+      center: centralLatLong,
+      zoom: 9 
    });
    
-   // Adiciona marcadores para cada local
    dadosLocais.forEach((uni) => {
       let popup = new mapboxgl.Popup({ offset: 25 })
       .setHTML(`<h3><a href="${uni.url}" target="_blank">${uni.descricao}</a></h3><br>${uni.endereco} <br> ${uni.cidade}`);
@@ -64,11 +78,9 @@
       .addTo(map);
    });
 
-   // Obtém a localização do usuário e adiciona um marcador
    navigator.geolocation.getCurrentPosition(processarGetCurrentPosition, () => { alert('Erro ao obter localização.') });
 }
 
-// Função para processar a localização do usuário
 function processarGetCurrentPosition(local) {
    let popup = new mapboxgl.Popup({ offset: 25 })
    .setHTML(`<h3> Estou aqui!!! </h3>`);
@@ -79,7 +91,6 @@ function processarGetCurrentPosition(local) {
 }
 let map;
 
-// Função que carrega os dados de unidades da PUC Minas
 window.onload = () => {
   montarMapa (data);
 }

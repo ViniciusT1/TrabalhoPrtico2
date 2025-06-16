@@ -1,4 +1,3 @@
-// JavaScript for login.html to validate users from JSON server
 
 document.getElementById('login-form').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -22,9 +21,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
       const user = users.find(u => u.login.toLowerCase() === loginInput.toLowerCase() && u.senha === senhaInput);
       if (user) {
         alert(`Bem-vindo, ${user.nome}!`);
-        // Save login state in localStorage
         localStorage.setItem('loggedInUser', JSON.stringify({ login: user.login, nome: user.nome, admin: user.admin }));
-        // Redirect to index.html regardless of admin status
         window.location.href = 'index.html';
       } else {
         alert('Usuário ou senha inválidos.');

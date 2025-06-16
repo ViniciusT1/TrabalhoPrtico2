@@ -1,4 +1,3 @@
-// JavaScript for cadastroUsu.html user registration form
 
 document.getElementById('cadastroUsu-form').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -13,7 +12,6 @@ document.getElementById('cadastroUsu-form').addEventListener('submit', function(
     return;
   }
 
-  // Prepare new user data
   const newUser = {
     login: login,
     nome: nome,
@@ -22,7 +20,6 @@ document.getElementById('cadastroUsu-form').addEventListener('submit', function(
     admin: false
   };
 
-  // Send POST request to JSON server to add new user
   fetch('http://localhost:3000/usuarios', {
     method: 'POST',
     headers: {
@@ -38,7 +35,6 @@ document.getElementById('cadastroUsu-form').addEventListener('submit', function(
   })
   .then(data => {
     alert(`Usuário ${data.nome} cadastrado com sucesso!`);
-    // Optionally redirect to login page
     window.location.href = 'login.html';
   })
   .catch(error => {
